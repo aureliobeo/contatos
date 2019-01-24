@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contatos</title>
+        <link rel="stylesheet" href="css/cadastro.css">
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <form name="meu_form" class="form" onsubmit="contatosControles.adiciona(event)">
+            <h1>Entre em contato</h1>
+    
+            <p class="nome">
+                <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+                <label for="nome">Nome</label>
+            </p>
+            <p class="fone">
+                <input type="text" id="foneid" placeholder="Numero" name="fone" />
+                <label for="fone">Fone</label>
+    
+            </p>
+            <p>
+                <input type="email" id="emailid" placeholder="Email" name="email" />
+                <label for="email">Email</label>
+            </p>
+            <p>
+                <textarea id="descid" placeholder="Deixe sua opnião"></textarea>
+            </p>
+            <button class="btn btn -primary" type="submit">Adiciona</button>
+        </form>
+    </body>
+    <script src="js/models/Contatos.js"></script>
+    <script src="js/controllers/ContatosControles.js"></script>
+    <script src="js/models/ListaContatos.js"></script>
+    <script>
+        let contatosControles = new ContatosControles();
+    </script>
+</html>
