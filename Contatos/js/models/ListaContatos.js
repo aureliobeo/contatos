@@ -1,12 +1,13 @@
 class ListaContatos{
+
     constructor(){
-        this._contatus = []
+        this._contatus = [];
     }
 
-    adiciona(contatus){
-        this._contatus.push(contatus);
+    adiciona(contatos){
+        this._contatus.push(contatos);
     }
     get contatus(){
-        return this._contatus;
+        return [].concat(this._contatus);
     }
 }

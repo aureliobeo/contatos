@@ -5,14 +5,15 @@ class ContatosControles{
         this._inputEmail = document.querySelector("#emailid");
         this._inputDesc = document.querySelector("#descid");
         this._listaContatus = new ListaContatos();
-
+        this._contatosView = new ContatosView(document.querySelector("#contatosView"));
+        this._contatosView.update(this._listaContatus);
     }
     adiciona(event){
         event.preventDefault();
         this._listaContatus.adiciona(this._criaContatos());
+        this._contatosView.update(this._listaContatus);
         this._limpaFormulario();
-
-        console.log(this._listaContatus.contatus);
+        console.log(typeof(this._inputNome.value));
     }
 
     _criaContatos(){

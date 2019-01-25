@@ -1,5 +1,6 @@
 class Contatos{
     constructor(nome, numero, email, desc){
+        
         this._nome = nome;
         this._numero = numero;
         this._email = email;
@@ -7,18 +8,18 @@ class Contatos{
     }
 
     get nome (){
-        return new this._nome;
+        return this._nome;
     }
 
     get numero(){
-        return new this._numero;
+        return this._numero;
     }
 
     get email(){
-        return new this._email;
+        return this._email;
     }
 
     get desc(){
-        return new this._desc;
+        return this._desc;
     }
 }
