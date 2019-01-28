@@ -13,7 +13,6 @@ class ContatosControles{
         this._listaContatus.adiciona(this._criaContatos());
         this._contatosView.update(this._listaContatus);
         this._limpaFormulario();
-        console.log(typeof(this._inputNome.value));
     }
 
     _criaContatos(){
@@ -32,5 +31,13 @@ class ContatosControles{
         this._inputDesc.value = "";
 
         this._inputNome.focus();
+    }
+
+    editar(model) {
+       console.log(model);
+    }
+
+    excluir(event){
+       console.log(event);
     }
 }

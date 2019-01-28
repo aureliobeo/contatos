@@ -4,8 +4,8 @@ class ListaContatos{
         this._contatus = [];
     }
 
-    adiciona(contatos){
-        this._contatus.push(contatos);
+    adiciona(contato){
+        this._contatus.push(contato);
     }
     get contatus(){
         return [].concat(this._contatus);
