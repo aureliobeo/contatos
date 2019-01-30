@@ -1,4 +1,4 @@
-class Contatos{
+class Contato{
     constructor(nome, numero, email, desc){
         
         this._nome = nome;
