@@ -6,21 +6,21 @@ class ContatosView{
 
     _template(model){
         return `
-        <table class="table table-hover table-bordered">
+        <table class="table table-sm">
                     <thead>
                         <tr>
-                            <th>Nome</th>
-                            <th>Numero</th>
-                            <th>Email</th>
-                            <th>Descrição</th>
-                            <th>       </th>
-                            <th>       </th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Numero</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">       </th>
+                            <th scope="col">       </th>
                         </tr>
                     </thead>
                     <tbody>
                     ${model.contatos.map(n =>
                         `
-                            <tr "id="contato">
+                            <tr "id="contato" scope="row">
                                 <td>${n.nome}</td>
                                 <td>${n.numero}</td>
                                 <td>${n.email}</td>
