@@ -9,3 +9,28 @@ section {
 article {
     float: left;
 }
+
+.container{
+    width: 100%;
+}
+#descid{
+    width: 306px;
+    height: 106px;
+    margin-bottom: 0px;
+}
+
+.form-control{
+    width: 180px;
+}
+.fone{
+    margin-bottom: -8px;
+}
+#emailid{
+    margin-bottom: 0px;
+}
+.email{
+    margin-bottom: 0px;
+}
+.btn{
+    margin-bottom: 15px;
+}

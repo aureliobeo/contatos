@@ -42,4 +42,5 @@ class ContatosView{
     excluir(model){
         console.log(model);
     }
+    
 } 

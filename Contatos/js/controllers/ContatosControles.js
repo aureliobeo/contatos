@@ -33,9 +33,19 @@ class ContatosControles{
         this._inputNome.focus();
     }
 
-    editar(model) {
-       console.log(model);
+    atribuirContato(contato) {
+        this._inputNome.value = contato.nome;
+        this._inputNumero.value = contato.numero;
+        this._inputEmail.value = contato.email;
+        this._inputDesc.value = contato.desc;
     }
+
+    editar(c) {
+        const contato = this._listaContatos.findContato(c)
+        this.atribuirContato(contato);
+        this._inputNome.focus();
+    }
+
 
     excluir(e){
        let newContacts = this._listaContatos.contatos;

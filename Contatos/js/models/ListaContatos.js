@@ -10,6 +10,9 @@ class ListaContatos{
     get contatos(){
         return [].concat(this._contatos);
     }
+    findContato(nome) {
+        return this._contatos.find(c => c.nome === nome);
+    }
 
     setContatos(contato) {
         this._contatos = contato;

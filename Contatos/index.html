@@ -15,24 +15,24 @@
         <form name="meu_form" class="form" onsubmit="contatosControles.adiciona(event)">
             <h1>Adicione um contato</h1>
 
-            <div class="form-group nome">
+            <div class="form-group nome tabela">
                 <label for="nome"></label>
-                <input type="text" class="form-control" id="nomeid" placeholder="Nome" required name="nome" />
+                <input type="text" class="form-control" id="nomeid" placeholder="Nome" name="nome" />
             </div>
 
 
-            <p class="fone">
-                <input type="number" id="foneid" placeholder="Numero" name="fone" />
+            <div class="form-group fone tabela">
+                <input type="number phone-mask" class="form-control" id="foneid" placeholder="Numero" name="fone" />
                 <label for="fone"></label>
 
-            </p>
-            <p>
-                <input type="text" id="emailid" placeholder="Email" name="email" />
+            </div>
+            <div class="form-group tabela email">
+                <input type="text" id="emailid" class="form-control" placeholder="Email" name="email" />
                 <label for="email"></label>
-            </p>
-            <p>
+            </div>
+            <div class="form-group tabela">
                 <textarea id="descid" placeholder="Deixe sua opnião"></textarea>
-            </p>
+            </div>
             <button class="btn btn-primary" type="submit">Adiciona</button>
         </form>
     </div>
