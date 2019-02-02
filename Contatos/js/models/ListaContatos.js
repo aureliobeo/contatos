@@ -14,6 +14,14 @@ class ListaContatos{
         return this._contatos.find(c => c.nome === nome);
     }
 
+    atualizarContato(novoContato, contatoAntigo) {
+        const contatos = this.contatos;
+        const indexContatoAntigo = contatos.indexOf(contatoAntigo);
+        contatos[indexContatoAntigo] = novoContato;
+
+        this.setContatos(contatos);
+    }
+
     setContatos(contato) {
         this._contatos = contato;
     }

@@ -7,10 +7,15 @@ class ContatosControles{
         this._listaContatos = new ListaContatos();
         this._contatosView = new ContatosView(document.querySelector("#contatosView"));
         this._contatosView.update(this._listaContatos);
+        this._atualizandoContato = false;
     }
     adiciona(event){
         event.preventDefault();
-        this._listaContatos.adiciona(this._criaContatos());
+        if (this._atualizandoContato) {
+            this.editarContato(this._criaContatos());
+        } else {
+            this._listaContatos.adiciona(this._criaContatos());
+        }
         this._contatosView.update(this._listaContatos);
         this._limpaFormulario();
     }
@@ -34,16 +39,23 @@ class ContatosControles{
     }
 
     atribuirContato(contato) {
+        this._contatoAntigo = contato;
         this._inputNome.value = contato.nome;
         this._inputNumero.value = contato.numero;
         this._inputEmail.value = contato.email;
         this._inputDesc.value = contato.desc;
     }
 
-    editar(c) {
-        const contato = this._listaContatos.findContato(c)
+    editar(nomeContato) {
+        const contato = this._listaContatos.findContato(nomeContato);
         this.atribuirContato(contato);
+        this._atualizandoContato = true;
         this._inputNome.focus();
+    }
+
+    editarContato(contato) {
+        this._listaContatos.atualizarContato(contato, this._contatoAntigo);
+        this._atualizandoContato = false;
     }
 
 
